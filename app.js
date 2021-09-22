@@ -6,6 +6,11 @@ var outputBox = document.querySelector("#output-box");
 
 submitBtn.addEventListener("click", submitHandler);
 
+function changeColor(color) {
+    document.body.style.background = color;
+}
+  
+
 function submitHandler(){
     var ip = Number(initialPrice.value);
     var qty = Number(stocksQuantity.value);
@@ -22,15 +27,17 @@ function calculateProfitAndLoss(initial, quantity, current){
 
     if (initial>current){
         var loss = (initial-current)*quantity;
-        var lossPercentage = (loss/initial)*100;
+        var lossPercentage = ((initial-current)/initial)*100;
+        changeColor('red');
 
-        showOutput(`Hey, the loss is ${loss} and the percent is ${lossPercentage}%`);
+        showOutput(`Hey, the loss is Rs ${loss} and the loss percent is ${lossPercentage.toFixed(2)}%`);
 
     }else if(current>initial){
         var profit = (current-initial)*quantity;
-        var profitPercentage = (profit/initial)*100;
+        var profitPercentage = ((current-initial)/initial)*100;
+        changeColor('green');
 
-        showOutput(`Hey, the profit is ${profit} and the percent is ${profitPercentage}%`)}
+        showOutput(`Hey, the profit is Rs ${profit} and the profit percent is ${profitPercentage.toFixed(2)}%`)}
 
      else if(initial === current){
         showOutput("No pain No gain and no gain no pain")

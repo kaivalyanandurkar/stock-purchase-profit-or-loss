@@ -3,13 +3,18 @@
 body{
     font-family: 'Playfair Display', serif;
     text-align: center;
-    background-color: var(--red)
+    background-color: #111827;
 }
 label{
     display: block;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    color: white;
   
     
+}
+
+#head{
+    color: white;
 }
 
 :root {
@@ -41,12 +46,12 @@ label{
 }
 
 .footer {
-  s
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     text-align: center;
     color: white;
-    border-top-right-radius:  1rem ;
+    border-radius:  1rem ;
     margin-top: 22rem;
+    background-color:#4B5563;
 
 }
 
