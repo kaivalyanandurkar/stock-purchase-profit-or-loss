@@ -32,6 +32,9 @@ label{
   
   #output-box{
       font-weight: bold;
+      color: yellow;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
   }
 
   .list-non-bullet {
